@@ -6,14 +6,26 @@ namespace CsharpTypes
     {
         static void Main(string[] args)
         {
-
+             
             Console.Write("Enter first number : ");
             var nbr1AsString = Console.ReadLine();
             var nbr1 = Convert.ToInt32(nbr1AsString);
 
+            if(nbr1 < 100 || nbr1 > 999)
+            {
+                Console.WriteLine("ERROR! ERROR! ERROR!");
+                return;
+            }
+
             Console.Write("Enter second number : ");
             var nbr2AsString = Console.ReadLine();
             var nbr2 = Convert.ToInt32(nbr2AsString);
+
+            if (nbr2 < 100 || nbr2 > 999)
+            {
+                Console.WriteLine("ERROR! ERROR! ERROR!");
+                return;
+            }
 
             var answer = nbr1 + nbr2;
 
